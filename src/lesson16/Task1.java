@@ -3,12 +3,12 @@ package lesson16;
 /*
 Создать обобщенный класс с тремя переменными
  */
-public class Task1<T, V, E> {
-    T obj1;
-    V obj2;
-    E obj3;
+public class Task1<T, V, K> {
+   T obj1;
+   V obj2;
+   K obj3;
 
-    Task1(T o1, V o2, E o3) {
+    Task1(T o1, V o2, K o3) {
         obj1 = o1;
         obj2 = o2;
         obj3 = o3;
@@ -28,7 +28,7 @@ public class Task1<T, V, E> {
         return obj2;
     }
 
-    public E getObj3() {
+    public K getObj3() {
         return obj3;
     }
 }
