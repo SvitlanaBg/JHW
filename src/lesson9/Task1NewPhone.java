@@ -7,12 +7,7 @@ package lesson9;
 Реализовать подсчет созданых телефонов с помощью статической переменной.
  */
 public class Task1NewPhone {
-    static void senMessage(String... arr) {
-        System.out.println("Количество телефонов, на которые необходимо отправить сообщение " + arr.length);
-        for (String a : arr) {
-            System.out.println(a + " ");
-        }
-    }
+
 
     public static void main(String[] args) {
         Phone myPhone = new Phone();
@@ -36,12 +31,14 @@ public class Task1NewPhone {
         myPhone2.receiveCall("Nil", "789456");
 
 
-        senMessage("442-34-23",
+       /* myPhone.sendMessage("442-34-23",
                 "534-54-35",
                 "442-43-42",
                 "442-34-23",
                 "442-33-32",
                 "668-54-44");
 
+*/
     }
+
 }

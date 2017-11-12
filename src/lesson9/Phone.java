@@ -58,20 +58,25 @@ public class Phone {
     }
 
 
-
     public void receiveCall(String name, String number) {
         System.out.print("Звонит " + name + " " + number);
         System.out.println();
     }
 
 
-    public static void sendMessage(String... numbersForMessage) {
+    /*public void sendMessage(String... numbersForMessage) {
         System.out.println("Количество ");
 
         for (String numbers : numbersForMessage) {
-            System.out.println(numbersForMessage + " ");
+            System.out.println(numbers + " ");
         }
         System.out.println();
     }
-
+*/
+    public void senMessage(String... arr) {
+        System.out.println("Количество телефонов, на которые необходимо отправить сообщение " + arr.length);
+        for (String a : arr) {
+            System.out.println(a + " ");
+        }
+    }
 }
