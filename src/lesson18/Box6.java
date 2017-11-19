@@ -28,4 +28,9 @@ public class Box6 {
     double volume() {
         return width * height * depth;
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

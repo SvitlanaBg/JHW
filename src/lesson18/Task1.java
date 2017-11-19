@@ -1,5 +1,8 @@
 package lesson18;
-
+/*
+Создать динамический массив, содержащий объекты класса HeavyBox. Раcпечатать его содержимое используя for each.
+Создать TreeSet содержащий HeavyBox. HeavyBox должен реализовать интерфейс Comparable. Распечатать содержимое с помощью for each.
+ */
 import java.util.SortedSet;
 import java.util.TreeSet;
 
