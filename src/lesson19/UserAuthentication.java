@@ -13,53 +13,13 @@ WrongPasswordException и WrongLoginException - пользовательские
 Используем multi-catch block. Метод возвращает true, если значения верны или false в другом случае.
  */
 public class UserAuthentication {
-    /* String login, password, confirmPassword;
 
-     public UserAuthentication(String login, String password, String confirmPassword) {
-         this.login = login;
-         this.password = password;
-         this.confirmPassword = confirmPassword;
-     }
+    public static void main(String[] args) {
 
-     public String getLogin() {
-         return login;
-     }
+        System.out.println(Authentication.loginConfirmation("myLogin", "myPassword", "myPassword") + "\n");
+        System.out.println(Authentication.loginConfirmation("myLogin1111", "myPassword", "MyPassword") + "\n");
+        System.out.println(Authentication.loginConfirmation("myLogin222", "myPassword111111111111111111111111111", "MyPassword11111111111111111111111111111111") + "\n");
+        System.out.println(Authentication.loginConfirmation("myLoginmyLoginmyLoginmyLoginmyLoginmyLoginmyLoginmyLoginmyLogin", "myPassword", "MyPassword") + "\n");
 
-     public void setLogin(String login) {
-         this.login = login;
-     }
-
-     public String getPassword() {
-         return password;
-     }
-
-     public void setPassword(String password) {
-         this.password = password;
-     }
-
-     public String getConfirmPassword() {
-         return confirmPassword;
-     }
-
-     public void setConfirmPassword(String confirmPassword) {
-         this.confirmPassword = confirmPassword;
-     }
- */
-    private static boolean loginConfirmation(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
-        if (login.length() > 20) {
-            throw new WrongLoginException("Login more than 20 ");
-        }
-        if (password.length() > 20 || !password.equals(confirmPassword)) {
-            throw new WrongPasswordException("Password more than 20 ");
-        }
-        return true;
     }
-
-    public static void main(String[] args) throws WrongLoginException, WrongPasswordException {
-        loginConfirmation("myLogin", "myPassword", "MyPassword");
-        loginConfirmation("myLogin1111", "myPassword", "MyPassword");
-        loginConfirmation("myLogin222", "myPassword111111111111111111111111111", "MyPassword11111111111111111111111111111111");
-        loginConfirmation("myLoginmyLoginmyLoginmyLoginmyLoginmyLoginmyLoginmyLoginmyLogin", "myPassword", "MyPassword");
-    }
-
 }

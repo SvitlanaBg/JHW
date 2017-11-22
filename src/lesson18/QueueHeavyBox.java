@@ -1,7 +1,9 @@
 package lesson18;
 /*
-Создать очередь, содержащую объекты класса HeavyBox. Используем класс ArrayDeque. Поместить объекты в очередь с помощью метода offer(). Удалить объекты методом poll()
+Создать очередь, содержащую объекты класса HeavyBox. Используем класс ArrayDeque.
+Поместить объекты в очередь с помощью метода offer(). Удалить объекты методом poll()
  */
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -14,7 +16,7 @@ public class QueueHeavyBox {
         boxes.offer(box);
         boxes.offer(box1);
         boxes.offer(box2);
-        while (!boxes.isEmpty()){
+        while (!boxes.isEmpty()) {
             System.out.println(boxes.poll());
         }
 

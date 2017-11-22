@@ -4,6 +4,7 @@ package lesson18;
 Написать метод, который перебирает элементы коллекции и проверяет вес коробок.
 Если вес коробки больше 300 гр, коробка перемещается в другую коллекцию.
  */
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -11,8 +12,8 @@ import java.util.List;
 public class IteratorHeavyBox {
 
     public static void main(String[] args) {
-        List<HeavyBox> boxes=new ArrayList<>();
-        List<HeavyBox> heavyBoxes=new ArrayList<>();
+        List<HeavyBox> boxes = new ArrayList<>();
+        List<HeavyBox> heavyBoxes = new ArrayList<>();
         HeavyBox box = new HeavyBox(87, 58, 69, 250);
         HeavyBox box1 = new HeavyBox(96, 54, 87, 300);
         HeavyBox box2 = new HeavyBox(25, 74, 89, 650);
@@ -30,10 +31,10 @@ public class IteratorHeavyBox {
     }
 
     public static void iteratorBox(List<HeavyBox> boxes, List<HeavyBox> heavyBoxes) {
-        Iterator<HeavyBox> iterator=boxes.iterator();
-        while (iterator.hasNext()){
+        Iterator<HeavyBox> iterator = boxes.iterator();
+        while (iterator.hasNext()) {
             HeavyBox elemetn = iterator.next();
-            if (elemetn.getWeight()>300){
+            if (elemetn.getWeight() > 300) {
                 iterator.remove();
                 heavyBoxes.add(elemetn);
             }
