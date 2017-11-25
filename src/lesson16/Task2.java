@@ -11,5 +11,4 @@ public class Task2<T extends Comparable, V extends Animal & Serializable, K exte
         Task2<String, Animal, Double> o = new Task2<>();
 
     }
-
 }

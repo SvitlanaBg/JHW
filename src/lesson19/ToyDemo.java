@@ -14,19 +14,18 @@ public class ToyDemo {
         toys.put(toy3.getName(), toy3);
 
         iteralEntries(toys);
-        iteraleKeys(toys);
-        TValues(toys);
+        iteralKeys(toys);
+        tValues(toys);
     }
 
-    public static void TValues(Map<String, Toy> toys) {
+    public static void tValues(Map<String, Toy> toys) {
         Collection<Toy> collection = toys.values();
         for (Toy value : collection) {
             System.out.println(value);
         }
-        ;
     }
 
-    public static void iteraleKeys(Map<String, Toy> toys) {
+    public static void iteralKeys(Map<String, Toy> toys) {
         Set<String> set = toys.keySet();
         for (String key : set) {
             System.out.println(key);
