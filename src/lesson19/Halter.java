@@ -1,9 +1,7 @@
 package lesson19;
 
 public class Halter {
-    String color, material;
-    public Halter() {
-    }
+    private String color, material;
 
     public Halter(String color, String material) {
         this.color = color;
@@ -14,15 +12,8 @@ public class Halter {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public String getMaterial() {
         return material;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
-    }
 }

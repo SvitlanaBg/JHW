@@ -1,6 +1,8 @@
 package lesson19;
 
 
+import java.io.Serializable;
+
 public class Horse extends Animal {
     private Halter halter;
     private String name;
@@ -12,10 +14,6 @@ public class Horse extends Animal {
 
     public Halter getHalter() {
         return halter;
-    }
-
-    public void setHalter(Halter halter) {
-        this.halter = halter;
     }
 
     public String getName() {

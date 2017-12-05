@@ -1,4 +1,7 @@
 package lesson19;
+/*
+* Переписать класс FileCopy: a) Добавить блок try-with-resources. б) Убрать throws IOException из объявления main() метода. И добавить соответствующий catch блок.
+ */
 
 import java.io.*;
 
