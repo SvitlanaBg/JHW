@@ -12,16 +12,16 @@ package lesson8;
 public class Task3Matrix {
     public static void main(String[] args) {
         int a = 5;
-        Matrix matrix1 = new Matrix(new int[][]{
+        Matrix matrix1 = new Matrix(new double[][]{
                 {5, 5, 7, 7},
-                {7, 5, 6, 1},
-                {9, 1, 3, 2}
+                {7, 5.3, 6, 1},
+                {9.5, 1, 3, 2}
         });
 
-        Matrix matrix2 = new Matrix(new int[][]{
-                {7, -5, 17, 27},
-                {8, -53, -6, 14},
-                {12, 21, 23, 22}
+        Matrix matrix2 = new Matrix(new double[][]{
+                {7, -5, 17.2, 27},
+                {8.32, -53, -6, 14},
+                {12, 21.1, 23, 22}
         });
 
         System.out.println("Количество строк матрицы: " + matrix1.getRows());

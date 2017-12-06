@@ -10,7 +10,8 @@ public class Person {
     }
 
     Person(String fullName, int age) {
-        System.out.println(fullName + " " + age);
+        this.fullName = fullName;
+        this.age = age;
     }
 
     public String getFullName() {
@@ -27,5 +28,13 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public void move() {
+        System.out.println(getFullName() + " is moving");
+    }
+
+    public void talk() {
+        System.out.println(getFullName() + " is talking");
     }
 }

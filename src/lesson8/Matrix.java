@@ -3,18 +3,18 @@ package lesson8;
 import java.lang.reflect.Array;
 
 public class Matrix {
-    private int[][] arr;
+    private double [][] arr;
     private int rows, columns;
 
-    public Matrix(int[][] arr) {
+    public Matrix(double[][] arr) {
         setArr(arr);
     }
 
-    public int[][] getArr() {
+    public double[][] getArr() {
         return arr;
     }
 
-    public void setArr(int[][] arr) {
+    public void setArr(double[][] arr) {
         this.arr = arr;
         this.rows = arr.length;
         this.columns = arr[0].length;

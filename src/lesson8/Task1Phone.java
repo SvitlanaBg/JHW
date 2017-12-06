@@ -30,5 +30,9 @@ public class Task1Phone {
 
         myPhone2.receiveCall(name2);
         System.out.println(" " + myPhone2.getNumber());
+
+        myPhone.receiveCall(name, myPhone.getNumber());
+        myPhone1.receiveCall(name1, myPhone.getNumber());
+        myPhone2.receiveCall(name2, myPhone.getNumber());
     }
 }

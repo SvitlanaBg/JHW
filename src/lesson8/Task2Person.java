@@ -11,6 +11,11 @@ public class Task2Person {
     public static void main(String[] args) {
         Person person1 = new Person();
         Person person2 = new Person("Ivanchenko Ivan", 15);
+
         System.out.println(person1.getFullName() + " " + person1.getAge());
+        System.out.println(person2.getFullName() + " " + person2.getAge());
+
+        person1.move();
+        person2.talk();
     }
 }
