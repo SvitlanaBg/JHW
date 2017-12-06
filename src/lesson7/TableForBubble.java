@@ -11,6 +11,7 @@ public class TableForBubble {
     public static void main(String[] args) {
         int[][] data = {
                 {0, 2, 5, 3, 4},
+                {7, 45, 86, 21, 11}
         };
         for (int[] arr : data) {
             System.out.println(Arrays.toString(arr));
