@@ -3,30 +3,57 @@ package lesson8;
 import java.lang.reflect.Array;
 
 public class Matrix {
-    int[] ar;
-    int str;
-    int stl;
+    private int[][] arr;
+    private int rows, columns;
 
-
-    public static int[][] matrixSum(int matrix1[][], int matrix2[][]) {
-        int sum[][] = new int[4][4];
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                sum[i][j] = matrix1[i][j] + matrix2[i][j];
-            }
-        }
-        return sum;
+    public Matrix(int[][] arr) {
+        setArr(arr);
     }
 
-    public static void printMatrix(int matrix3[][]) {
-        for (int i = 0; i < matrix3.length; i++) {
-            for (int j = 0; j < matrix3.length; j++) {
-            }
+    public int[][] getArr() {
+        return arr;
+    }
 
+    public void setArr(int[][] arr) {
+        this.arr = arr;
+        this.rows = arr.length;
+        this.columns = arr[0].length;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public int getColums() {
+        return columns;
+    }
+
+    public void matrixSum(Matrix matrix1, Matrix matrix2) {
+        System.out.println("Сложение двух матриц");
+        for (int i = 0; i < getRows(); i++) {
+            for (int j = 0; j < getColums(); j++) {
+                System.out.print(matrix1.arr[i][j] + matrix2.arr[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 
-    public static void matrixSum() {
+    public void matrixMultiply(Matrix matrix, int a) {
+        System.out.println("Умножение матрицы на число " + a);
+        for (int i = 0; i < getRows(); i++) {
+            for (int j = 0; j < getColums(); j++) {
+                System.out.print(matrix.arr[i][j] * a + " ");
+            }
+            System.out.println();
+        }
+    }
 
+    public void printMatrix(Matrix matrix) {
+        for (int i = 0; i < getRows(); i++) {
+            for (int j = 0; j < getColums(); j++) {
+                System.out.print(matrix.arr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
