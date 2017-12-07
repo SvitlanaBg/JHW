@@ -3,15 +3,11 @@ package lesson8;
 import java.lang.reflect.Array;
 
 public class Matrix {
-    private double [][] arr;
+    private double[][] arr;
     private int rows, columns;
 
     public Matrix(double[][] arr) {
         setArr(arr);
-    }
-
-    public double[][] getArr() {
-        return arr;
     }
 
     public void setArr(double[][] arr) {

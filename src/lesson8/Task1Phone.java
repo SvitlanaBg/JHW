@@ -32,7 +32,7 @@ public class Task1Phone {
         System.out.println(" " + myPhone2.getNumber());
 
         myPhone.receiveCall(name, myPhone.getNumber());
-        myPhone1.receiveCall(name1, myPhone.getNumber());
-        myPhone2.receiveCall(name2, myPhone.getNumber());
+        myPhone1.receiveCall(name1, myPhone1.getNumber());
+        myPhone2.receiveCall(name2, myPhone2.getNumber());
     }
 }

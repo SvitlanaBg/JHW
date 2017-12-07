@@ -72,7 +72,8 @@ public class Phone {
     public void receiveCall(String name) {
         System.out.print("Звонит " + name);
     }
-    public void receiveCall (String name, int number){
-        System.out.println("Звонит "+ name+" номер телефона: "+number);
+
+    public void receiveCall(String name, int number) {
+        System.out.println("Звонит " + name + " номер телефона: " + number);
     }
 }
