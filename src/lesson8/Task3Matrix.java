@@ -11,7 +11,7 @@ package lesson8;
  */
 public class Task3Matrix {
     public static void main(String[] args) {
-        int a = 5;
+        int a = 5; //умножение на число
         Matrix matrix1 = new Matrix(new double[][]{
                 {5, 5, 7, 7},
                 {7, 5.3, 6, 1},
