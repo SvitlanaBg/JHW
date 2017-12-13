@@ -5,7 +5,7 @@ public class Phone {
     private String model;
     private int weight;
 
-    Phone(int n, String m, int w) {
+    public Phone(int n, String m, int w) {
         this();
         this.number = n;
         this.model = m;

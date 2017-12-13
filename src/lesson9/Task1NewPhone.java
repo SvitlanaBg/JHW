@@ -1,43 +1,41 @@
 package lesson9;
 
-/*
-Создать метод sendMessage с аргументами переменной длинны. Данный метод принимает на вход номера телефонов,
-которым будут отправлены сообщения. Метод выводит на консоль номера этих телефонов.
-Изменить класс Phone в соответствии с концепцией JavaBean.
-Реализовать подсчет созданых телефонов с помощью статической переменной.
+import lesson9.Phone;
+
+/**
+ * Создать метод sendMessage с аргументами переменной длинны. Данный метод принимает на вход номера телефонов,
+ * которым будут отправлены сообщения. Метод выводит на консоль номера этих телефонов.
+ * Изменить класс Phone в соответствии с концепцией JavaBean.
+ * Реализовать подсчет созданых телефонов с помощью статической переменной.
  */
 public class Task1NewPhone {
-
-
     public static void main(String[] args) {
-        Phone myPhone = new Phone();
-        Phone myPhone1 = new Phone();
-        Phone myPhone2 = new Phone();
+        Phone myPhone = new Phone(4566123, "Sony", 85);
+        Phone myPhone1 = new Phone(658625, "Nokia", 78);
+        Phone myPhone2 = new Phone(321456, "LG", 87);
 
-        myPhone.setModel("Sony");
-        myPhone.setNumber("4566123");
-        myPhone.setWeight(85);
+        String name, name1, name2;
+        name = "Linda";
+        name1 = "Maria";
+        name2 = "Larisa";
 
-        myPhone1.setModel("Nokia");
-        myPhone1.setNumber("658625");
-        myPhone1.setWeight(78);
+        myPhone.receiveCall(name);
+        System.out.println(" " + myPhone.getNumber());
 
-        myPhone2.setModel("LG");
-        myPhone2.setNumber("321456");
-        myPhone2.setWeight(87);
+        myPhone1.receiveCall(name1);
+        System.out.println(" " + myPhone1.getNumber());
 
-        myPhone.receiveCall("Linda", "56485655");
-        myPhone1.receiveCall("Marina", "4566125");
-        myPhone2.receiveCall("Nil", "789456");
+        myPhone2.receiveCall(name2);
+        System.out.println(" " + myPhone2.getNumber());
 
+        myPhone.receiveCall(name, myPhone.getNumber());
+        myPhone1.receiveCall(name1, myPhone1.getNumber());
+        myPhone2.receiveCall(name2, myPhone2.getNumber());
 
-       /* myPhone.sendMessage("442-34-23",
-                "534-54-35",
-                "442-43-42",
-                "442-34-23",
-                "442-33-32",
-                "668-54-44");
+        myPhone.sendMessage(myPhone1.getNumber(), myPhone2.getNumber(), 7845124, 5648714);
 
-*/
+        System.out.println("Количество созданых телефонов: " + Phone.getCount());
+
+        System.gc();
     }
 }
