@@ -1,8 +1,8 @@
 package lesson9;
 
 public class Circle {
-private double radius;
-public static final double PI=3.1415;
+    private double radius;
+    public static final double PI = 3.1415;
 
     public Circle() {
     }
@@ -19,10 +19,11 @@ public static final double PI=3.1415;
         this.radius = radius;
     }
 
-    public double sCircle (double radius){
-return PI*radius*radius;
-}
-public double lCircle (double radius){
-    return 2*PI*radius;
-}
+    public double sCircle(double radius) {
+        return PI * radius * radius;
+    }
+
+    public double lCircle(double radius) {
+        return 2 * PI * radius;
+    }
 }

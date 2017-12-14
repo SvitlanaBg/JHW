@@ -26,15 +26,18 @@ public class Task3Matrix {
 
         System.out.println("Количество строк матрицы: " + matrix1.getRows());
         System.out.println("Количество столбцов матрицы: " + matrix1.getColums());
-        matrix1.printMatrix(matrix1);
+        matrix1.printMatrix();
 
         System.out.println("Количество строк матрицы: " + matrix2.getRows());
         System.out.println("Количество столбцов матрицы: " + matrix2.getColums());
-        matrix1.printMatrix(matrix2);
+        matrix2.printMatrix();
 
-        matrix1.matrixSum(matrix1, matrix2);
-        matrix1.matrixMultiply(matrix1, a);
-        matrix2.matrixMultiply(matrix2, a);
+        System.out.println("Сложение матриц");
+        matrix1.matrixSum(matrix2);
+        matrix1.printMatrix();
 
+        System.out.println("Умножение матрицы на число " + a);
+        matrix1.matrixMultiply(a);
+        matrix1.printMatrix();
     }
 }
