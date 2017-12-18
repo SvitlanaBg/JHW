@@ -10,7 +10,9 @@ public class Recursion {
         if (a > b) {
             System.out.print(a-- + " ");
         }
-        if (a == b) return a;
+        if (a == b) {
+            return a;
+        }
         result = recurs(a, b);
         return result;
     }

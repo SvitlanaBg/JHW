@@ -1,5 +1,7 @@
 package lesson9;
 
+import java.util.Arrays;
+
 public class Client {
     private String surname;
     private String name;
@@ -108,4 +110,25 @@ public class Client {
         return result;
     }
 
+    public void takeBook(int quantity) {
+    }
+
+    public void takeBook(String... nameOfBook) {
+        System.out.println(Arrays.toString(nameOfBook));
+    }
+
+    public void takeBook(Book... books) {
+        System.out.println(Arrays.toString(books));
+    }
+
+    public void returneBook(int quantity) {
+    }
+
+    public void returneBook(String... nameOfBook) {
+        System.out.println(Arrays.deepToString(nameOfBook));
+    }
+
+    public void returneBook(Book... books) {
+        System.out.println(Arrays.deepToString(books));
+    }
 }

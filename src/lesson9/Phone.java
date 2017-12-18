@@ -7,14 +7,14 @@ public class Phone {
     private static int count = 0;
 
 
-    Phone(int n, String m, int w) {
+    public Phone(int n, String m, int w) {
         this();
         this.number = n;
         this.model = m;
         this.weight = w;
     }
 
-    Phone() {
+    public Phone() {
         System.out.println("New Phone is created");
         count++;
     }
