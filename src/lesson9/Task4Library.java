@@ -33,6 +33,7 @@ public class Task4Library {
         client3.returneBook(book4, book5);
         client4.returneBook(book3.getNameOfBook(), book2.getNameOfBook());
 
-
+        client5.takeBook(15);
+        client6.returneBook(10);
     }
 }

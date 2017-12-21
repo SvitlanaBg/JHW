@@ -110,25 +110,46 @@ public class Client {
         return result;
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "surname='" + surname + '\'' +
+                ", name='" + name + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                ", cardNumber='" + cardNumber + '\'' +
+                ", faculty='" + faculty + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
+
     public void takeBook(int quantity) {
+        System.out.println(this.surname + " " + this.name + " количество взятых книг " + quantity);
+        System.out.println();
     }
 
     public void takeBook(String... nameOfBook) {
-        System.out.println(Arrays.toString(nameOfBook));
+        System.out.println(this.surname + " " + this.name + " " + Arrays.toString(nameOfBook));
+        System.out.println();
     }
 
     public void takeBook(Book... books) {
-        System.out.println(Arrays.toString(books));
+        System.out.println(this.surname + " " + this.name + " " + Arrays.toString(books));
+        System.out.println();
     }
 
     public void returneBook(int quantity) {
+        System.out.println(this.surname + " " + this.name + " количество возвращенных книг " + quantity);
+        System.out.println();
     }
 
     public void returneBook(String... nameOfBook) {
-        System.out.println(Arrays.deepToString(nameOfBook));
+        System.out.println(this.surname + " " + this.name + " " + Arrays.deepToString(nameOfBook));
+        System.out.println();
     }
 
     public void returneBook(Book... books) {
-        System.out.println(Arrays.deepToString(books));
+        System.out.println(this.surname + " " + this.name + " " + Arrays.deepToString(books));
+        System.out.println();
     }
 }
