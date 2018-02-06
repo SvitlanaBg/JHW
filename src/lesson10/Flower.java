@@ -4,17 +4,12 @@ public abstract class Flower {
     private String country;
     private int days;
     private static int countFlower;
-    private int priceOfflower;
+    private int price;
 
-    public Flower(String country, int days) {
+    public Flower(String country, int days, int price) {
         this.country = country;
         this.days = days;
-    }
-
-    public Flower() {
-        this.country = country;
-        this.days = days;
-        this.priceOfflower = priceOfflower;
+        this.price = price;
     }
 
     public String getCountry() {
@@ -41,12 +36,12 @@ public abstract class Flower {
         Flower.countFlower = countFlower;
     }
 
-    public int getPriceOfflower() {
-        return priceOfflower;
+    public int getPrice() {
+        return price;
     }
 
-    public void setPriceOfflower(int priceOfflower) {
-        this.priceOfflower = priceOfflower;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
@@ -57,7 +52,7 @@ public abstract class Flower {
         Flower flower = (Flower) o;
 
         if (getDays() != flower.getDays()) return false;
-        if (getPriceOfflower() != flower.getPriceOfflower()) return false;
+        if (getPrice() != flower.getPrice()) return false;
         return getCountry() != null ? getCountry().equals(flower.getCountry()) : flower.getCountry() == null;
     }
 
@@ -65,7 +60,7 @@ public abstract class Flower {
     public int hashCode() {
         int result = getCountry() != null ? getCountry().hashCode() : 0;
         result = 31 * result + getDays();
-        result = 31 * result + getPriceOfflower();
+        result = 31 * result + getPrice();
         return result;
     }
 
@@ -74,9 +69,9 @@ public abstract class Flower {
         return "Flower{" +
                 "country='" + country + '\'' +
                 ", days=" + days +
-                ", priceOfflower=" + priceOfflower +
+                ", price=" + price +
                 '}';
     }
 
-    abstract int price();
+    abstract public int price();
 }
